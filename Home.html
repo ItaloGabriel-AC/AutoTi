@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AutoTI — Automação para Pequenos Negócios</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f8fafc; --card:#ffffff; --accent:#0ea5a4; --accent-2:#2563eb;
+      --muted:#6b7280; --shadow: 0 8px 24px rgba(15,23,42,0.06);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background:linear-gradient(180deg,#ffffff 0%, var(--bg) 100%);
+      color:#0f172a;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+
+    /* Container */
+    .container{max-width:1100px;margin:0 auto;padding:28px;}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0;}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{
+      width:46px;height:46px;border-radius:10px;
+      background:linear-gradient(135deg,var(--accent-2),var(--accent));
+      color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;
+      box-shadow:var(--shadow);
+    }
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px}
+    .btn-whatsapp{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:center;padding:28px 0}
+    .hero-grid{display:flex;flex-direction:column;gap:18px}
+    .title{font-size:28px;font-weight:800;margin:0}
+    .subtitle{color:var(--muted);margin:0}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+    .btn-primary{background:var(--accent);color:#fff;padding:12px 16px;border-radius:10px;text-decoration:none;font-weight:700}
+    .btn-ghost{background:#fff;border:1px solid #e6eef0;padding:10px 14px;border-radius:10px;text-decoration:none;color:var(--muted)}
+
+    .mockup{
+      background:var(--card);padding:18px;border-radius:14px;box-shadow:var(--shadow);
+      border:1px solid #eef2f6;
+    }
+
+    /* Services */
+    .section{padding:34px 0}
+    .cards{display:grid;grid-template-columns:repeat(1,1fr);gap:14px}
+    .card{background:var(--card);padding:16px;border-radius:12px;border:1px solid #eef2f6;box-shadow:0 6px 18px rgba(15,23,42,0.04)}
+    .card h4{margin:0 0 6px 0}
+    .muted{color:var(--muted);font-size:14px}
+
+    /* Portfolio grid */
+    .grid-3{display:grid;grid-template-columns:1fr;gap:14px}
+    .portfolio-hero{height:120px;background:#f3f4f6;border-radius:10px}
+
+    /* About / Contact */
+    .about-box{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+    .profile{width:120px;height:120px;border-radius:14px;background:#eef2f6}
+
+    form{background:var(--card);padding:16px;border-radius:12px;border:1px solid #eef2f6}
+    label{display:block;font-size:13px;color:var(--muted);margin-top:10px}
+    input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef0;margin-top:6px;font-size:14px}
+    .btn-submit{background:var(--accent-2);color:#fff;padding:12px 14px;border-radius:10px;border:none;margin-top:12px;font-weight:700;cursor:pointer}
+
+    footer{padding:20px 0;color:var(--muted);font-size:14px;border-top:1px solid #eef2f6;margin-top:28px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+    /* Responsive */
+    @media(min-width:768px){
+      .hero{grid-template-columns:1fr 420px}
+      .cards{grid-template-columns:repeat(3,1fr)}
+      .grid-3{grid-template-columns:repeat(3,1fr)}
+    }
+    @media(min-width:1024px){
+      .title{font-size:36px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="brand">
+        <div class="logo">TI</div>
+        <div>
+          <div style="font-weight:700">AutoTI</div>
+          <div style="font-size:13px;color:var(--muted)">Automação para pequenos negócios</div>
+        </div>
+      </div>
+
+      <nav aria-label="Navegação principal">
+        <a href="#services">Serviços</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#about">Sobre</a>
+        <a href="#contact">Contato</a>
+        <a class="btn-whatsapp" href="https://wa.me/5561986760432?text=Ol%C3%A1%2C+gostaria+de+um+or%C3%A7amento" target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-grid">
+          <h1 id="hero-title" class="title">Automação e tecnologia para pequenos negócios crescerem sem complicação</h1>
+          <p class="subtitle">Transformamos processos manuais em soluções simples, rápidas e acessíveis — para você ganhar tempo e vender mais.</p>
+
+          <div class="cta-row">
+            <a class="btn-primary" href="https://wa.me/5561986760432?text=Ol%C3%A1%2C+gostaria+de+um+or%C3%A7amento" target="_blank" rel="noopener">Peça seu orçamento</a>
+            <a class="btn-ghost" href="#services">Ver serviços</a>
+          </div>
+
+          <div style="display:flex;gap:14px;margin-top:12px">
+            <div style="background:#fff;padding:10px;border-radius:10px;border:1px solid #eef2f6">Rápido</div>
+            <div style="background:#fff;padding:10px;border-radius:10px;border:1px solid #eef2f6">Acessível</div>
+            <div style="background:#fff;padding:10px;border-radius:10px;border:1px solid #eef2f6">Suporte</div>
+          </div>
+        </div>
+
+        <aside class="mockup" aria-hidden="true">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div style="height:12px;width:120px;background:#eef2f6;border-radius:6px"></div>
+              <div style="height:10px;width:200px;background:#f8fafc;border-radius:6px;margin-top:8px"></div>
+            </div>
+            <div style="width:44px;height:44px;background:#eef2f6;border-radius:8px"></div>
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px">
+            <div style="background:#fff;padding:10px;border-radius:8px;border:1px solid #eef2f6">Vendas: R$ 4.200</div>
+            <div style="background:#fff;padding:10px;border-radius:8px;border:1px solid #eef2f6">Pedidos: 86</div>
+            <div style="grid-column:1 / -1;background:#fff;padding:10px;border-radius:8px;border:1px solid #eef2f6">Gráfico de vendas (exemplo)</div>
+          </div>
+
+          <div style="font-size:13px;color:var(--muted);margin-top:10px">Exemplo de dashboard para controlar vendas e estoque.</div>
+        </aside>
+      </section>
+
+      <!-- Services -->
+      <section id="services" class="section" aria-labelledby="services-title">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <h2 id="services-title" style="margin:0;font-size:20px">Nossos Serviços</h2>
+            <div class="muted" style="margin-top:6px">Soluções práticas pensadas para pequenos negócios.</div>
+          </div>
+        </div>
+
+        <div class="cards" style="margin-top:18px">
+          <div class="card">
+            <h4>Automação de Planilhas</h4>
+            <div class="muted">Relatórios automáticos, consolidação de vendas e controle de estoque sem dor de cabeça.</div>
+          </div>
+
+          <div class="card">
+            <h4>Integração de Ferramentas</h4>
+            <div class="muted">Conectamos WhatsApp, formulários e planilhas para centralizar pedidos e dados.</div>
+          </div>
+
+          <div class="card">
+            <h4>Sites Rápidos</h4>
+            <div class="muted">Site institucional ou cardápio digital para seu negócio começar a vender online.</div>
+          </div>
+
+          <div class="card">
+            <h4>Chatbots (WhatsApp)</h4>
+            <div class="muted">Atendimento automático para dúvidas, pedidos e encaminhamentos simples.</div>
+          </div>
+
+          <div class="card">
+            <h4>Dashboards e BI</h4>
+            <div class="muted">Visualize suas métricas importantes de forma clara e acionável.</div>
+          </div>
+
+          <div class="card">
+            <h4>Consultoria TI</h4>
+            <div class="muted">Organização de contas, backup, segurança básica e boas práticas.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio -->
+      <section id="portfolio" class="section" aria-labelledby="portfolio-title">
+        <h3 id="portfolio-title" style="margin:0;font-size:20px">Portfólio</h3>
+        <div class="muted" style="margin-top:6px">Alguns projetos — comece com casos simples para divulgar.</div>
+
+        <div class="grid-3" style="margin-top:14px">
+          <div class="card">
+            <div class="portfolio-hero"></div>
+            <h4 style="margin-top:10px">Café Bella — Cardápio Digital</h4>
+            <div class="muted">Implementamos cardápio digital + pedidos via WhatsApp, reduzindo erros e tempo de atendimento.</div>
+          </div>
+
+          <div class="card">
+            <div class="portfolio-hero"></div>
+            <h4 style="margin-top:10px">Loja Rosa — Automação de Vendas</h4>
+            <div class="muted">Conectamos e-commerce com planilhas e geramos relatórios diários de performance.</div>
+          </div>
+
+          <div class="card">
+            <div class="portfolio-hero"></div>
+            <h4 style="margin-top:10px">Contábil & Co — Dashboard Financeiro</h4>
+            <div class="muted">Dashboard simples para acompanhamento mensal dos clientes.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="section" aria-labelledby="about-title">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap">
+          <div style="flex:1;min-width:220px">
+            <h3 id="about-title" style="margin:0;font-size:20px">Sobre nós</h3>
+            <p class="muted" style="margin-top:8px">Somos uma dupla apaixonada por tecnologia, focada em ajudar pequenos negócios a economizarem tempo e dinheiro com soluções digitais sob medida.</p>
+
+            <ul style="margin-top:10px;padding-left:18px;color:var(--muted)">
+              <li>Simplicidade: soluções diretas, sem complicação.</li>
+              <li>Rapidez: entregas ágeis para quem precisa começar logo.</li>
+              <li>Confiança: comunicação clara e suporte inicial.</li>
+            </ul>
+
+            <div style="margin-top:12px;display:flex;gap:10px">
+              <a class="btn-primary" href="#contact">Quero um piloto</a>
+              <a class="btn-ghost" href="https://wa.me/5561986760432?text=Ol%C3%A1%2C+gostaria+de+um+projeto+piloto" target="_blank" rel="noopener">Fale no WhatsApp</a>
+            </div>
+          </div>
+
+          <div style="width:220px">
+            <div class="profile" aria-hidden="true"></div>
+            <div style="margin-top:10px;font-weight:700">Wesley & Italo</div>
+            <div class="muted" style="font-size:13px">Soluções em TI | Automação</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section" aria-labelledby="contact-title">
+        <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:flex-start">
+          <div style="flex:1;min-width:260px">
+            <h3 id="contact-title" style="margin:0;font-size:20px">Pronto para simplificar o seu negócio?</h3>
+            <div class="muted" style="margin-top:6px">Fale com a gente agora mesmo e peça um orçamento sem compromisso.</div>
+
+            <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+              <a style="display:inline-block;background:#fff;padding:10px 12px;border-radius:10px;border:1px solid #eef2f6;text-decoration:none;color:var(--muted)" href="mailto:contato@autoti.com.br">✉️ contato@autoti.com.br</a>
+              <a class="btn-whatsapp" href="https://wa.me/5561986760432?text=Ol%C3%A1%2C+gostaria+de+um+or%C3%A7amento" target="_blank" rel="noopener">💬 Chat no WhatsApp</a>
+            </div>
+          </div>
+
+          <div style="flex:1;min-width:300px">
+            <form onsubmit="event.preventDefault(); alert('Obrigado! Em breve entraremos em contato.')" aria-label="Formulário de contato">
+              <label for="nome">Nome</label>
+              <input id="nome" name="nome" placeholder="Seu nome" required>
+
+              <label for="phone">Telefone / WhatsApp</label>
+              <input id="phone" name="phone" placeholder="(00) 9 0000-0000" required>
+
+              <label for="empresa">Empresa (opcional)</label>
+              <input id="empresa" name="empresa" placeholder="Nome da empresa">
+
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="4" placeholder="Explique brevemente o que precisa" required></textarea>
+
+              <button class="btn-submit" type="submit">Enviar mensagem</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div>© 2025 AutoTI — Soluções em TI para Pequenos Negócios</div>
+      <div style="display:flex;gap:12px">
+        <a href="#" style="color:var(--muted);text-decoration:none">Instagram</a>
+        <a href="#" style="color:var(--muted);text-decoration:none">LinkedIn</a>
+        <a href="" target="_blank" rel="noopener" style="color:var(--muted);text-decoration:none">WhatsApp</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
